@@ -6,16 +6,12 @@ import matplotlib as mpl
 mpl.use("Agg")  # AGG(Anti-Grain Geometry engine)
 import matplotlib.pyplot as plt
 
-# loss_info_list = [
-#     "loss",
-#     "masked_lm_loss",
-#     "next_sent_loss",
-#     "non_text_loss",
-#     "corresponding_loss",
-# ]
-
 loss_info_list = [
-    "loss",
+    " loss",
+    "masked_lm_loss",
+    "next_sent_loss",
+    "non_text_loss",
+    "corresponding_loss",
 ]
 
 total_loss_info_list = [
@@ -69,12 +65,6 @@ def main():
     accu_info_array = np.array(accu_info_array).T
 
     fig, (axL, axC, axR) = plt.subplots(ncols=3)
-
-    print(
-        np.sort(loss_info_array.T)[0][-10:],
-        loss_info_array.max(),
-        loss_info_array.argmax(),
-    )
     axL.plot(loss_info_array)
     axL.legend(loss_info_list)
     axL.set_ylim(

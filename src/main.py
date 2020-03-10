@@ -186,6 +186,11 @@ def pretrain(args) -> None:
                 )
             )
             logger.debug(
+                "epoch:{0} i:{1}  non_text_loss:{2}".format(
+                    epoch, i, non_text_loss.item()
+                )
+            )
+            logger.debug(
                 "epoch:{0} i:{1} corresponding_loss:{2}".format(
                     epoch, i, corresponding_loss.item()
                 )
@@ -324,7 +329,7 @@ def main() -> None:
     parser.add_argument("--bert_weight_name_file", type=str, required=True)
     parser.add_argument(
         "--learning_rate",
-        default=1e-6,
+        default=1e-5,
         type=float,
         help="The initial learning rate for Adam.",
     )

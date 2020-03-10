@@ -207,7 +207,7 @@ class MyBertForNonTextPreTraining(BertPreTrainedModel):
 
         self.apply(self.init_bert_weights)
         self.predict_feature = config.predict_feature
-        self.loss_fct = nn.CrossEntropyLoss(ignore_index=-1)
+        self.loss_fct = nn.CrossEntropyLoss(ignore_index=-1, reduction="mean")
 
         # 元論文では90%マスクされた入力画像の意味クラスの分布と近づけるが、ここでは出力を入力に直接近づける。
         self.vis_criterion = nn.MSELoss(reduction="mean")
