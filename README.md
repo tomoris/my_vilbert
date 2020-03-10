@@ -10,6 +10,10 @@ We use vilbert_beta repository.
 cd src/model
 wget https://raw.githubusercontent.com/jiasenlu/vilbert_beta/master/vilbert/vilbert.py
 wget https://raw.githubusercontent.com/jiasenlu/vilbert_beta/master/vilbert/utils.py
+
+cd ../../
+poetry install
+poetry shell
 ```
 
 ## Usage
@@ -24,7 +28,7 @@ import numpy as np
 non_text_size = 7
 feat_size = 100
 non_text_feat_array = np.random.rand(non_text_size, feat_size)
-np.savet("sample/pretrain_sample.non_text_feat.npy", non_text_feat_array)
+np.save("sample/pretrain_sample.non_text_feat.npy", non_text_feat_array)
 ```
 
 execute pretraining and visualize info.
