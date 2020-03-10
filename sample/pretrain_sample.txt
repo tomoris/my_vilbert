@@ -1,0 +1,15 @@
+This is pretrain sample file.	0
+
+Sentences need to be split by space.	1
+One line per one sentence.	-1
+
+Empty lines are delimiter of documents.	2
+
+A feature vector of non-Textual data need to correspond a sentence.	-1
+pretrain_sample.non_text_feat.csv contains the feature vectors.	3
+If a sentence has a feature vector, the index of the feature vector is written in the end of the line.	4
+If a sentence doesn't have a feature vector, -1 is written in the end of the line.	-1
+The delimiter is tab ('\t').	5
+
+It means maximum index of a feature vector is number of lines of pretrain_sample.non_text_feat.csv.	6
+In this case, that is 7.	-1
