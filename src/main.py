@@ -186,7 +186,7 @@ def pretrain(args) -> None:
                 )
             )
             logger.debug(
-                "epoch:{0} i:{1}  non_text_loss:{2}".format(
+                "epoch:{0} i:{1} non_text_loss:{2}".format(
                     epoch, i, non_text_loss.item()
                 )
             )
